@@ -1,0 +1,61 @@
+# Test configuration for Release Drafter with commit inclusion
+include-commits: true
+
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+template: |
+  ## Changes
+
+  $CHANGES
+
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+    commit-types:
+      - 'feat'
+
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+      - 'bug'
+    commit-types:
+      - 'fix'
+
+  - title: '📄 Documentation'
+    labels:
+      - 'documentation'
+    commit-types:
+      - 'docs'
+
+  - title: '🧰 Maintenance'
+    labels:
+      - 'chore'
+    commit-types:
+      - 'chore'
+      - 'refactor'
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+
+version-resolver:
+  major:
+    labels:
+      - 'major'
+    commit-types:
+      - 'feat!'
+      - 'fix!'
+  minor:
+    labels:
+      - 'minor'
+    commit-types:
+      - 'feat'
+  patch:
+    labels:
+      - 'patch'
+    commit-types:
+      - 'fix'
+  default: patch
+
+sort-by: 'merged_at'
+sort-direction: 'descending'
