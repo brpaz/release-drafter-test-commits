@@ -9,3 +9,4 @@ PR Feature
 Bug fix PR
 Another feature
 Test fix
+Test new format
