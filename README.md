@@ -4,3 +4,4 @@ Test feature 1
 Bug fix 1
 Docs update
 Chore
+Breaking change
