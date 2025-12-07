@@ -3,3 +3,4 @@ Test repository for Release Drafter with conventional commits support
 Test feature 1
 Bug fix 1
 Docs update
+Chore
